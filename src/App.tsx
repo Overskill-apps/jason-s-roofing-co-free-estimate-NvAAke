@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from "@/components/ui/toaster";
 import Index from '@/pages/Index';
-import Estimate from '@/pages/Estimate';
+import EstimateForm from '@/pages/EstimateForm';
 import ThankYou from '@/pages/ThankYou';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/estimate" element={<Estimate />} />
+          <Route path="/estimate" element={<EstimateForm />} />
           <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
         <Toaster />
