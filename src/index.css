@@ -37,9 +37,12 @@ All colors MUST be HSL.
     
     /* Custom gradients and effects */
     --gradient-hero: linear-gradient(135deg, hsl(var(--roofing-blue)), hsl(var(--roofing-orange)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--roofing-light)));
     --shadow-elegant: 0 10px 30px -10px hsl(var(--roofing-blue) / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(var(--roofing-blue) / 0.15);
+    --shadow-form: 0 8px 32px -8px hsl(var(--roofing-blue) / 0.2);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -127,5 +130,48 @@ All colors MUST be HSL.
   
   .overskill-logo {
     @apply w-5 h-5 rounded-sm;
+  }
+
+  /* Custom roofing components */
+  .roofing-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .roofing-card-hover {
+    @apply hover:shadow-elegant hover:-translate-y-1;
+    transition: var(--transition-smooth);
+  }
+
+  .roofing-form-focus {
+    @apply focus:ring-2 focus:ring-roofing-blue/20 focus:border-roofing-blue;
+    transition: var(--transition-smooth);
+  }
+
+  .roofing-gradient-button {
+    background: var(--gradient-hero);
+    @apply text-white font-semibold hover:opacity-90;
+}
+
+  .roofing-form-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-form);
+    @apply border-0 backdrop-blur-sm;
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-form {
+    box-shadow: var(--shadow-form);
+  }
+}
+    transition: var(--transition-smooth);
+  }
+}
   }
 }
